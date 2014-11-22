@@ -1,0 +1,12 @@
+.form{
+	
+	margin-left:250px;
+}
+
+.panel-body{
+	margin-top:50px;
+}
+
+label{margin-left: 20px;}
+#datepicker{width:180px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}
