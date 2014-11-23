@@ -1,6 +1,6 @@
 <%@ page import="java.util.List"%>
-<%@include file="header.jsp"%>
 <%@ page import="com.company.fingoals.dto.Goal"%>
+<%@include file="header.jsp"%>
 <link rel="stylesheet" href="addgoal.css">
 
 	<div class = "container">
@@ -17,6 +17,8 @@
 				<div class = "form-panel panel panel-default">
 					<div class = "account-wall">
 						<div class = "panel" id = "innerpanel">
+						<div class = "panel-header"></div>
+							<div class = "panel-body">
 																						
 					<form name = "saveinvestment" action="./investments" method = "post">			
 					Invested Date :<div class="input-group">
