@@ -79,14 +79,15 @@ public class InvestmentsDAO {
 		
 		Connection conn = DAOUtil.openConnection();
 			
-		String sql = "INSERT INTO INVESTMENTS(INV_ID,INVESTED_DATE,SYMBOL,AMOUNT,USER_ID) VALUES (S1_SEQ.NEXTVAL,?,?,?,?)";
+		String sql = "INSERT INTO INVESTMENTS(INV_ID,INVESTED_DATE,SYMBOL,AMOUNT,USER_ID) VALUES (?,?,?,?,?)";
 		
 		PreparedStatement stmt = conn.prepareStatement(sql);
 		
-		stmt.setTimestamp(1, investment.getInvestedDate());
-		stmt.setString(2, investment.getSymbol());
-		stmt.setBigDecimal(3,investment.getAmount());
-		stmt.setBigDecimal(4, investment.getUserID());
+		stmt.setBigDecimal(1, investment.getInvestmentID());
+		stmt.setTimestamp(2, investment.getInvestedDate());
+		stmt.setString(3, investment.getSymbol());
+		stmt.setBigDecimal(4,investment.getAmount());
+		stmt.setBigDecimal(5, investment.getUserID());
 		
 		stmt.executeUpdate();
 		
@@ -160,5 +161,24 @@ public class InvestmentsDAO {
 		DAOUtil.closeConnection(conn);
 		
 		return investment;
+	}
+	
+	public BigDecimal getInvestmentId() throws Exception {
+		
+		Connection conn = DAOUtil.openConnection();
+		
+		String sql = "SELECT S1_SEQ.NEXTVAL FROM DUAL";
+		
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		
+		ResultSet rs = stmt.executeQuery();
+		
+		BigDecimal id = null;
+		
+		while(rs.next()){
+			id = rs.getBigDecimal("NEXTVAL");
+		}
+		
+		return id;
 	}
 }

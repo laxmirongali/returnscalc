@@ -1,6 +1,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="com.company.fingoals.dto.Company"%>
 <%@include file="header.jsp"%>
+<link rel="stylesheet" href="companyUserProfile.css">
 
 
 	<%					
@@ -9,40 +10,39 @@
 
 
 	<div class="container">
-		<center>
+
+		<div class = "row">
+		
+		<div class = "col-lg-12">
+		<div class = "panel panel-default">
+			<div class = "panel-header">
+			<center>
 			<h3>Enter a company name</h3>
 		</center>
-
-		<div class="col-md-9">
+		</div>
+		
+		<div class="panel-body">
+		
 			<form class="form" class = "well" name="myform" role="search"
 				action="./CompanyLinks" method="post">
 				<input type="hidden" name="companysymbol" />
-				<div class="input-group">
+				<div class="input-group" id = "search">
 					<input type="text" class="form-control" placeholder="Company Name"
 						id="query" name="companyname" value="" />
 					<div class="input-group-btn">
 						<button type="submit" class="btn btn-md btn-success">
 							<span>Search</span>
 						</button>
+						</div>
 					</div>
-				</div>
+									
+													
 			
-		</div>
-	</div>
-
-
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-lg-12">
-
-				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-striped table-bordered table-hover"
-							id="#">
+							id="table1">
 							<thead>
-								<tr>
+								<tr bgcolor = "ccccff">
 									<th>Symbol</th>
 									<th>Name</th>
 									<th>Exchange</th>
@@ -74,23 +74,12 @@
 							</tbody>
 						</table>
 					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-lg-12">
-
-				<div class="table-responsive">
+					<hr>
+					<div class = "table-responsive">			
 					<table class="table table-striped table-bordered table-hover"
-						id="#">
-						<thead>
-							<tr>
+						id="table2">
+						<thead style = "width =1080px; height = 20px;">
+							<tr bgcolor = "ccccff">
 								<th>Symbol</th>
 								<th>From-Date</th>
 								<th>To-Date</th>
@@ -140,15 +129,21 @@
 						</tbody>
 
 					</table>
+					</div>
 					<button type = "submit" class = "btn btn-primary pull-right" onclick = "sendvalues();"><span>Submit</span></button>
 					</form>
 				</div>
-
-			</div>
-
+					
+					
+				</div>
+				</div>
+			
 		</div>
-
 	</div>
+	
+
+
+
 
 	<div aria-hidden="true" aria-labelledby="modalLabel" role="dialog"
 		tabindex="-1" id="modal" class="modal fade">

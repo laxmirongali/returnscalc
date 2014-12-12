@@ -1,12 +1,17 @@
 package com.company.fingoals.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class Goal {
+public class Goal implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7197759773473041841L;
 	private BigDecimal goalID;
 	private BigDecimal userID;
 	private String goalName;

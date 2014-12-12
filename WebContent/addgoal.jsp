@@ -10,11 +10,13 @@
 			</div>
 			
 			<div class = "col-md-6">
-		
-			<div class = "panel">
+			<center><h3>Add Your Goal Information Here</h3></center>
+			<div class = "form-panel panel panel-default">
+					<div class = "account-wall">
+						<div class = "panel" id = "innerpanel">
 				
 				<div class = "panel-header">
-					<center><h3>Add Your Goal Information Here</h3></center>
+					
 				</div>
 			
 				<div class = "panel-body">									
@@ -42,6 +44,8 @@
 						<button type = "submit" name = "dispatch" class = "btn btn-md btn-success pull-right"  
 						value="saveAdd"><span>Save</span></button>										
 					</form>
+					</div>
+					</div>
 				
 				</div>
 			

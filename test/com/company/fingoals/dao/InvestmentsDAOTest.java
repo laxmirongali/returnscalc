@@ -94,5 +94,13 @@ public class InvestmentsDAOTest extends TestCase {
 			assertEquals(2, investments.size());
 		}
 	}
+	
+	public void testGetInvestmentId() throws Exception {
+		
+		InvestmentsDAO invDAO = new InvestmentsDAO();
+		BigDecimal bd = invDAO.getInvestmentId();
+		System.out.println("InvID : "+bd);
+		assertNotNull(bd);
+	}
 
 }

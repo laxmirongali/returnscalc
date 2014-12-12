@@ -36,7 +36,7 @@
 				<div class="collapse navbar-collapse navHeaderCollapse">
 
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Welcome <%=user.getFirstName()%></a></li>
+						<li><a href="companyUserProfile.jsp">Welcome <%=user.getFirstName()%></a></li>
 						<li><a href="./goals">Goals</a></li>
 						<li><a href="./investments">Investments</a></li>
 						<li><a href="./logout">Logout</a></li>

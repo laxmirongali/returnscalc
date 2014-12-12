@@ -40,7 +40,7 @@
 						
 						<table id="goals_investments" class = "table table-bordered table-hover">
 							<thead>
-								<tr>
+								<tr bgcolor = "ccccff">
 									<th></th>
 									<th>Select Goal</th>
 									<th>Inv Percentage</th>
@@ -54,8 +54,8 @@
 							<td nowrap></td>
 							<td>
 						
-						<select name="goal_key1" >
-							<div align="center">
+						<select name="newgoal_name_0" >
+							
 						
 						<%												
 												
@@ -73,10 +73,10 @@
 								}
 							}
 							%>
-							</div>
+							
 							</select>
 							</td>
-							<td><input type = "text" name = "percetage" class = "form-control"
+							<td><input type = "text" name = "newproperty_value_0" class = "form-control"
 								placeholder = "Investment%"></td>
 							<td class="data_item_options"><a class="btn btn-sm btn-danger" href="javascript:deleteRow()" title="Delete row" onClick="deleteRow(this); return false;"><span class = "glyphicon glyphicon-remove"></span></a></td>
 							</tr>
@@ -89,7 +89,7 @@
 							<tr>
 								<td></td>
 								<td>
-								<select name="newgoal_name_\${counter}" >
+								<select name="newgoal_name_RWCNT" >
 								
 								<%												
 												
@@ -110,7 +110,7 @@
 								
 								</select>
 								
-								<td><input type = "text" name="newproperty_value_\${counter}" value="" class = "form-control"
+								<td><input type = "text" name="newproperty_value_RWCNT" value="" class = "form-control"
 								placeholder = "Investment%"></td>
 								
 								<td><a class="btn btn-sm btn-danger" href="javascript:deleteRow()" title="Delete row" onclick="deleteRow(this); return false;"><span class = "glyphicon glyphicon-remove"></span></a></td>
@@ -171,7 +171,7 @@ function addRow(sTableId) {
     var htmlCode = "<tr>"+template.find("tr:first").html()+"</tr>";
     var id = parseInt(template.data("counter"),10)+1;
     template.data("counter", id);
-    htmlCode = htmlCode.replace(/\${counter}/g, id);
+    htmlCode = htmlCode.replace(/RWCNT/g, id);    
     table.find("tbody:last").append(htmlCode);
 }
 

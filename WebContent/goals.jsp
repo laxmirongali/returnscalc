@@ -20,7 +20,7 @@
 						<table class="table table-striped table-bordered table-hover"
 							id="#">
 							<thead>
-								<tr>
+								<tr bgcolor = "ccccff">
 									<th>Select</th>
 									<th>Goal ID</th>
 									<th>User ID</th>
